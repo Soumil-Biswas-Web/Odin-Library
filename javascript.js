@@ -77,18 +77,13 @@ function removeBtn(row) {
     removeBtn.classList = "remove_button";
     removeBtn.setAttribute("style", "background-color: var(--theme-color); color: white; font-wieght: 600");
     removeBtn.addEventListener("click",  () => {
-        myLibrary = myLibrary.filter((book, i) => i != row.dataset.index);
+        myLibrary.splice(row.dataset.index, 1);
         row.remove();
+        console.log(myLibrary);
       });
 
     return removeBtn;
 }
-/*
-// Clear Book from Table
-
-function clearTableEntry(row) {
-    table.removeChild(row);
-}*/
 
 // Clear Books from table
 function clearTable(table) {
@@ -103,8 +98,8 @@ function clearTable(table) {
 function showBooks() {
     clearTable(table);
 
-    myLibrary.forEach((book) => {
-        table.append(createTableEntry(book));
+    myLibrary.forEach((book, i) => {
+        table.append(createTableEntry(book, i));
     });
 }
 
@@ -128,9 +123,16 @@ function onClickShowBooks() {
 
 
 const theHobbit = new Book ("The Hobbit", "J.R.R. Tolkien", 295, false);
+const lotr = new Book("The Fellowship of the Ring", "JRR Tolkien", 450, false);
+const wot = new Book("Wheel of Time", "Robert Jordan", 812, true);
+const wimpy = new Book("Diary of a Wimpy Kid", "Dav Pilkie", 126, true);
 console.log(theHobbit.info());
+console.log(myLibrary);
 
 addBookToLibrary(theHobbit);
+addBookToLibrary(lotr);
+addBookToLibrary(wot);
+addBookToLibrary(wimpy);
 
 
 const buttonAddBook = document.querySelector(".button_add_book");
