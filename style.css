@@ -1,13 +1,17 @@
+:root {
+    --theme-color: blue;
+}
+
 /* Add Book Form */
 
 .add_book {
-    /*display: none;*/
+    display: none;
 }
 
 /* Show Books Table */
 
 .show_books {
-    /*display: none;*/
+    display: none;
 }
 
 table, td, th {
