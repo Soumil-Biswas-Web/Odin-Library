@@ -22,7 +22,49 @@
 
     <p class="name">Name's books</p>
 
-    <button>Add Book</button>
-    <button>Display Books</button>
+    <button class="button_add_book">Add Book</button>
+    <button class="button_show_books">Display Books</button>
+
+    <div class="add_book">
+        <form action="">
+            <label for="book_name">Book Name: </label>
+            <input type="text" id="book_name" name="book_name" placeholder="The Hobbit">
+
+            <label for="book_author">Author: </label>
+            <input type="text" id="book_author" name="book_author" placeholder="J.R.R. Tolkien">
+
+            <label for="book_pages">Pages: </label>
+            <input type="number" id="book_pages" name="book_pages" placeholder="295">
+
+            <div class="book_read">
+                <p>Book Read? (Yes/No)</p>
+
+                <div>
+                    <input type="radio" id="Yes" name="isRead" value="Yes">
+                    <label for="Yes">Yes</label>
+                </div>
+    
+                <div>
+                    <input type="radio" id="No" name="isRead" value="No" checked>
+                    <label for="No">No</label>
+                </div>    
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div class="show_books">
+        <table class="books">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read?</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </body>
 </html>

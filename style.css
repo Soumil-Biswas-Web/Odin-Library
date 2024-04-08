@@ -1,0 +1,19 @@
+/* Add Book Form */
+
+.add_book {
+    /*display: none;*/
+}
+
+/* Show Books Table */
+
+.show_books {
+    /*display: none;*/
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 0 10px;
+}
