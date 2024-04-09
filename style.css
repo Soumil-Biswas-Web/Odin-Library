@@ -67,6 +67,13 @@ svg {
     border-radius: 5px 0 0 5px;
 }
 
+input {
+    height: 34px;
+    padding-left: 10px;
+    background-color: var(--theme-base-color-3);
+    border-radius: 5px;
+}
+
 .search_panel svg {
     background-color: var(--theme-color);
     border-radius: 0 5px 5px 0;
@@ -79,7 +86,7 @@ svg {
 button {
     background-color: var(--theme-color);
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 button:hover {
@@ -99,12 +106,52 @@ button:hover {
 
 .body {
     background-color: var(--theme-base-color);
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    padding-top: 50px;
+}
+
+.main_buttons {
+    padding-top: 20px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.main_buttons > button, .submit_button {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0 10px
 }
 
 /* Add Book Form */
 
 .add_book {
     display: none;
+    background-color: var(--theme-base-color-2);
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+}
+
+#book_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#book_form input {
+    background-color: var(--theme-base-color-3);
+    border-radius: 5px;
 }
 
 /* Show Books Table */
