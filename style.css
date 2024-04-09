@@ -157,7 +157,7 @@ button:hover {
 /* Show Books Table */
 
 .show_books {
-    display: block;
+    display: none;
     width: min(100vw, 600px);
     margin-top: 50px;
 }
