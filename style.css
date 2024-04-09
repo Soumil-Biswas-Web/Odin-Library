@@ -157,13 +157,19 @@ button:hover {
 /* Show Books Table */
 
 .show_books {
-    display: none;
+    display: block;
+    width: min(100vw, 600px);
+    margin-top: 50px;
 }
 
-table, td, th {
-    border: 1px solid black;
+table {
+    background-color: var(--theme-base-color-2);
+    border-radius: 10px;
+    padding: 20px 0;
+    height: calc(100vh - 238px);
 }
 
 td, th {
     padding: 0 10px;
+    border-bottom: 1px solid var(--theme-base-color-3);
 }
