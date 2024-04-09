@@ -1,5 +1,104 @@
 :root {
-    --theme-color: blue;
+    --theme-color: #38bdf8;
+    --theme-base-color: white;
+    --theme-base-color-2: whitesmoke;
+    --theme-base-color-3: #d1d5db;    
+    --text-color: black;
+}
+
+:root.light{
+    --theme-color: #38bdf8;
+    --theme-base-color: white;
+    --theme-base-color-2: whitesmoke;
+    --theme-base-color-3: #d1d5db;
+    --text-color: black;
+}
+
+:root.dark{
+    --theme-color: #ed2553;
+    --theme-base-color: #0d0d0d;
+    --theme-base-color-2: #1f1f1f;
+    --theme-base-color-3: #383838;  
+    --text-color: white;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    border: none;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+svg {
+    fill: var(--text-color);
+    width: 36px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 40px;
+    justify-content: space-between;
+    background-color: var(--theme-base-color-2);
+}
+
+.right_side, .header > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.right_side p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+#search_bar {
+    width: min(500px, calc(100vw/4));
+    height: 34px;
+    padding-left: 10px;
+    background-color: var(--theme-base-color-3);
+    border-radius: 5px 0 0 5px;
+}
+
+.search_panel svg {
+    background-color: var(--theme-color);
+    border-radius: 0 5px 5px 0;
+}
+
+.theme_button:hover {
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.left_side {
+    display: flex;
+    align-items: stretch;
+}
+
+.sign_in {
+    background-color: var(--theme-base-color-3);
+}
+
+/* BODY */
+
+.body {
+    background-color: var(--theme-base-color);
 }
 
 /* Add Book Form */

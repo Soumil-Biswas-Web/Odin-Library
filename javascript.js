@@ -75,7 +75,7 @@ function removeBtn(row) {
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     removeBtn.classList = "remove_button";
-    removeBtn.setAttribute("style", "background-color: var(--theme-color); color: white; font-wieght: 600");
+    //removeBtn.setAttribute("style", "background-color: var(--theme-color); color: white; font-wieght: 600");
     removeBtn.addEventListener("click",  () => {
         myLibrary.splice(row.dataset.index, 1);
         row.remove();
@@ -126,8 +126,8 @@ const theHobbit = new Book ("The Hobbit", "J.R.R. Tolkien", 295, false);
 const lotr = new Book("The Fellowship of the Ring", "JRR Tolkien", 450, false);
 const wot = new Book("Wheel of Time", "Robert Jordan", 812, true);
 const wimpy = new Book("Diary of a Wimpy Kid", "Dav Pilkie", 126, true);
-console.log(theHobbit.info());
-console.log(myLibrary);
+/*console.log(theHobbit.info());
+console.log(myLibrary);*/
 
 addBookToLibrary(theHobbit);
 addBookToLibrary(lotr);
@@ -151,4 +151,13 @@ const table = document.querySelector(".books");
 const buttonShowBooks = document.querySelector(".button_show_books");
 buttonShowBooks.addEventListener("click", onClickShowBooks);
 
-// Style the website like nhentai lol. Add light mode option as well.
+// Theme Function
+function setTheme() {
+    const root = document.documentElement;
+    const newTheme = root.className === 'dark' ? 'light' : 'dark';
+    root.className = newTheme;
+}
+
+const themeButton = document.querySelector(".theme_button");
+console.log("Theme Button initiated");
+themeButton.addEventListener("click", setTheme);
