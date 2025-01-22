@@ -79,8 +79,17 @@ input {
     border-radius: 0 5px 5px 0;
 }
 
+.theme_button {
+    background-color: transparent;
+    height: 36px;
+}
+
 .theme_button:hover {
     cursor: pointer;
+}
+
+.theme_button svg {
+    width: 32px;
 }
 
 button {
