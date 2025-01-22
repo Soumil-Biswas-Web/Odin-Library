@@ -138,7 +138,7 @@ button:hover {
     border-radius: 15px;
     margin-top: 50px;
     padding: 20px;
-    width: 300px;
+    width: min(100vw, 300px);
     height: 500px;
 }
 
@@ -159,6 +159,7 @@ button:hover {
 .show_books {
     display: none;
     width: min(100vw, 600px);
+    overflow-x: auto;
     margin-top: 50px;
 }
 
@@ -166,10 +167,20 @@ table {
     background-color: var(--theme-base-color-2);
     border-radius: 10px;
     padding: 20px 0;
-    height: calc(100vh - 238px);
+    height: calc(100vh - 238px);    
 }
 
 td, th {
     padding: 0 10px;
     border-bottom: 1px solid var(--theme-base-color-3);
+}
+
+@media(max-width: 400px) {
+    #search_bar {
+        display: none;
+    }
+
+    .search_panel svg {
+        border-radius: 5px;
+    }
 }
