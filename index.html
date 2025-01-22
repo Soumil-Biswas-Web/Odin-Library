@@ -75,28 +75,25 @@
         </div>
 
         <div class="sign_in">
-            <form id="sign_in_form" action="submit">
+            <form id="sign_in_form" action="">
                 <label for="email_username">Email/ Username: </label>
                 <input type="text" id="email_username" name="email_username" placeholder="Enter email/ username" required>
     
                 <label for="password">Password: </label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required>
-    
-                <label for="book_pages">Pages: </label>
-                <input type="number" id="book_pages" name="book_pages" placeholder="295" required>
+                <input type="password" id="login_password" name="password" placeholder="Enter password" required>
 
                 <div>
                     <input type="checkbox" id="rememberMe" name="rememberMe" value="true">
                     <label for="rememberMe">Remember me</label>
                 </div>
     
-                <button class="submit_button" type="submit">Sign In</button>
+                <button class="submit_button">Sign In</button>
                 <button class="register_btn alt_button">Register</button>
             </form>
         </div>
         
         <div class="register">
-            <form id="register_form" action="submit">
+            <form id="register_form" action="">
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email" placeholder="email@example.com" required>
 
@@ -108,16 +105,13 @@
 
                 <label for="password_rep">Repeat Password: </label>
                 <input type="password" id="password_rep" name="password_rep" placeholder="Enter password again" required>                
-    
-                <label for="book_pages">Pages: </label>
-                <input type="number" id="book_pages" name="book_pages" placeholder="295" required>
 
                 <div>
                     <input type="checkbox" id="updates" name="updates" value="false">
                     <label for="updates">Send updates to email</label>
                 </div>
     
-                <button class="submit_button" type="submit">Register</button>
+                <button class="submit_button">Register</button>
                 <button class="sign_in_btn alt_button">Sign In</button>
             </form>
         </div>  
