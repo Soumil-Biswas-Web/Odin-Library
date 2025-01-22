@@ -98,7 +98,7 @@ button:hover {
     align-items: stretch;
 }
 
-.sign_in {
+.sign_in_btn {
     background-color: var(--theme-base-color-3);
 }
 
@@ -132,7 +132,7 @@ button:hover {
 
 /* Add Book Form */
 
-.add_book {
+.add_book, .sign_in, .register {
     display: none;
     background-color: var(--theme-base-color-2);
     border-radius: 15px;
@@ -142,16 +142,22 @@ button:hover {
     height: 500px;
 }
 
-#book_form {
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
 }
 
-#book_form input {
+form input {
     background-color: var(--theme-base-color-3);
     border-radius: 5px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* Show Books Table */
@@ -173,6 +179,16 @@ table {
 td, th {
     padding: 0 10px;
     border-bottom: 1px solid var(--theme-base-color-3);
+}
+
+/* alt buttons in sign-in and register forms */
+
+.alt_button {
+    background-color: var(--theme-base-color-3);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0 10px;
 }
 
 @media(max-width: 400px) {

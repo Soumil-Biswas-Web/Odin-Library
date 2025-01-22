@@ -108,6 +108,8 @@ function showBooks() {
 function onClickAddBook() {
     document.querySelector(".add_book").style.display = "block";
     document.querySelector(".show_books").style.display = "none";
+    document.querySelector(".sign_in").style.display = "none";
+    document.querySelector(".register").style.display = "none";
 }
 
 // On Click show_books
@@ -115,12 +117,35 @@ function onClickAddBook() {
 function onClickShowBooks() {
     document.querySelector(".add_book").style.display = "none";
     document.querySelector(".show_books").style.display = "block";
+    document.querySelector(".sign_in").style.display = "none";
+    document.querySelector(".register").style.display = "none";    
+
+    showBooks();
+}
+
+// On Click sign_in
+
+function onClickSignIn() {
+    document.querySelector(".add_book").style.display = "none";
+    document.querySelector(".show_books").style.display = "none";
+    document.querySelector(".sign_in").style.display = "block";
+    document.querySelector(".register").style.display = "none";    
+
+    showBooks();
+}
+
+// On Click register
+
+function onClickRegister() {
+    document.querySelector(".add_book").style.display = "none";
+    document.querySelector(".show_books").style.display = "none";
+    document.querySelector(".sign_in").style.display = "none";
+    document.querySelector(".register").style.display = "block";    
 
     showBooks();
 }
 
 // Driver Code
-
 
 const theHobbit = new Book ("The Hobbit", "J.R.R. Tolkien", 295, false);
 const lotr = new Book("The Fellowship of the Ring", "JRR Tolkien", 450, false);
@@ -133,7 +158,6 @@ addBookToLibrary(theHobbit);
 addBookToLibrary(lotr);
 addBookToLibrary(wot);
 addBookToLibrary(wimpy);
-
 
 const buttonAddBook = document.querySelector(".button_add_book");
 buttonAddBook.addEventListener("click", onClickAddBook);
@@ -150,6 +174,16 @@ const table = document.querySelector(".books");
 
 const buttonShowBooks = document.querySelector(".button_show_books");
 buttonShowBooks.addEventListener("click", onClickShowBooks);
+
+// Sign In Form
+
+const buttonSignIn = document.querySelector(".sign_in_btn");
+buttonSignIn.addEventListener("click", onClickSignIn);
+
+// Register Form
+
+const buttonRegister = document.querySelector(".register_btn");
+buttonRegister.addEventListener("click", onClickRegister);
 
 // Theme Function
 function setTheme() {
