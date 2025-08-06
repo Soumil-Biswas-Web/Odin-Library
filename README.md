@@ -3,7 +3,7 @@ Project Submission for the JavaScript Course in the Odin Project
 
 Open the Website using the link https://soumil-biswas-web.github.io/Odin-Library/
 
-This is a fully functioning digital library capable of keeping track of books, authors and their reading status. Comes with the option to switch to drak mode.
+This is a fully functioning digital library capable of keeping track of books, authors and their reading status. Comes with the option to switch to dark mode.
 
 ## Getting Started
 
